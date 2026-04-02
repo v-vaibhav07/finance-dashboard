@@ -1,0 +1,797 @@
+/* .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+  background: var(--card-bg);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.menu-btn:hover {
+  background: var(--hover-bg);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo-icon {
+  font-size: 24px;
+}
+
+.logo-text {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.role-switcher {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.role-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  pointer-events: none;
+}
+
+.role-badge.admin {
+  background: rgba(99, 102, 241, 0.15);
+  color: #6366f1;
+}
+
+.role-badge.viewer {
+  background: rgba(34, 197, 94, 0.15);
+  color: #22c55e;
+}
+
+.role-select {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.theme-btn {
+  background: var(--hover-bg);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.theme-btn:hover {
+  background: var(--border);
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 10px 16px;
+  }
+
+  .menu-btn {
+    display: flex;
+  }
+
+  .logo-text {
+    font-size: 17px;
+  }
+} */
+
+
+
+
+
+
+
+
+
+
+/* ============================
+   HEADER
+   ============================ */
+/*    
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+  background: var(--card-bg);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+  transition: background 0.3s, border-color 0.3s;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.menu-btn:hover {
+  background: var(--hover-bg);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon {
+  font-size: 26px;
+  line-height: 1;
+}
+
+.logo-text {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.logo-subtext {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin: 0;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+
+.role-switcher {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.role-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.role-badge.admin {
+  background: rgba(99, 102, 241, 0.15);
+  color: #6366f1;
+  border: 1px solid rgba(99, 102, 241, 0.25);
+}
+
+.role-badge.viewer {
+  background: rgba(34, 197, 94, 0.15);
+  color: #22c55e;
+  border: 1px solid rgba(34, 197, 94, 0.25);
+}
+
+.role-select {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+
+.theme-btn {
+  background: var(--hover-bg);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.theme-btn:hover {
+  background: var(--border);
+  transform: scale(1.08);
+}
+
+
+@media (max-width: 768px) {
+  .header {
+    padding: 10px 16px;
+  }
+
+  .menu-btn {
+    display: flex;
+  }
+
+  .logo-icon {
+    font-size: 22px;
+  }
+
+  .logo-text {
+    font-size: 17px;
+  }
+
+  .logo-subtext {
+    display: none;
+  }
+
+  .role-badge span {
+    display: none;
+  }
+
+  .role-badge {
+    padding: 6px 8px;
+  }
+} */
+
+/* ============================
+   HEADER — Resend Style
+   ============================ */
+/*    
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+  background: var(--header-bg, var(--card-bg));
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.menu-btn:hover {
+  background: var(--hover-bg);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon {
+  font-size: 26px;
+  line-height: 1;
+}
+
+.logo-text {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.logo-subtext {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin: 0;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.role-switcher {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.role-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.role-badge.admin {
+  background: rgba(99, 102, 241, 0.15);
+  color: #818cf8;
+  border: 1px solid rgba(99, 102, 241, 0.3);
+}
+
+.role-badge.viewer {
+  background: rgba(34, 197, 94, 0.15);
+  color: #4ade80;
+  border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.role-select {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.theme-btn {
+  background: var(--hover-bg);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.theme-btn:hover {
+  background: var(--border);
+  transform: scale(1.08);
+}
+
+
+@media (max-width: 768px) {
+  .header {
+    padding: 10px 16px;
+  }
+
+  .menu-btn {
+    display: flex;
+  }
+
+  .logo-icon {
+    font-size: 22px;
+  }
+
+  .logo-text {
+    font-size: 17px;
+  }
+
+  .logo-subtext {
+    display: none;
+  }
+
+  .role-badge span {
+    display: none;
+  }
+
+  .role-badge {
+    padding: 6px 8px;
+  }
+}  */
+
+
+
+
+
+
+
+
+
+
+
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 28px;
+  height: 62px;
+  background: var(--header-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: background var(--transition-slow), border-color var(--transition-slow);
+}
+
+/* Subtle top accent line */
+.header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary), #B4A4FF, var(--primary));
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.dark .header::after {
+  opacity: 0.7;
+}
+
+/* ============================
+   LEFT SECTION
+   ============================ */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.menu-btn {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 7px;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+  width: 36px;
+  height: 36px;
+}
+
+.menu-btn:hover {
+  background: var(--hover-bg);
+  color: var(--text-primary);
+  border-color: var(--primary);
+}
+
+/* ============================
+   LOGO
+   ============================ */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  cursor: default;
+  user-select: none;
+}
+
+.logo-icon-wrap {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: var(--primary-light);
+  border: 1px solid var(--primary-glow, rgba(124, 110, 248, 0.2));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  line-height: 1;
+  transition: all var(--transition-base);
+  position: relative;
+  overflow: hidden;
+}
+
+.logo-icon-wrap::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--primary-light), transparent);
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.logo:hover .logo-icon-wrap::before {
+  opacity: 1;
+}
+
+.logo-icon-wrap span {
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 0 6px rgba(124, 110, 248, 0.4));
+}
+
+.logo-text {
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+  line-height: 1.2;
+  font-family: var(--font-main);
+  letter-spacing: -0.03em;
+}
+
+.logo-text span {
+  color: var(--primary);
+}
+
+.logo-subtext {
+  font-size: 10.5px;
+  color: var(--text-muted);
+  margin: 0;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-family: var(--font-main);
+}
+
+/* ============================
+   RIGHT SECTION
+   ============================ */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ============================
+   ROLE SWITCHER
+   ============================ */
+.role-switcher {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.role-badge {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 14px 6px 10px;
+  border-radius: 50px;
+  font-size: 12.5px;
+  font-weight: 600;
+  pointer-events: none;
+  transition: all var(--transition-base);
+  white-space: nowrap;
+  font-family: var(--font-main);
+  letter-spacing: 0.01em;
+  border: 1px solid transparent;
+}
+
+.role-badge .role-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.3); opacity: 0.7; }
+}
+
+.role-badge.admin {
+  background: rgba(139, 126, 253, 0.12);
+  color: var(--primary);
+  border-color: rgba(139, 126, 253, 0.2);
+}
+
+.role-badge.admin .role-dot {
+  background: var(--primary);
+}
+
+.role-badge.viewer {
+  background: var(--green-light);
+  color: var(--green);
+  border-color: rgba(46, 232, 138, 0.2);
+}
+
+.role-badge.viewer .role-dot {
+  background: var(--green);
+}
+
+.role-select {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+  border: none;
+  border-radius: 50px;
+}
+
+.role-switcher:hover .role-badge {
+  filter: brightness(1.1);
+  transform: scale(1.02);
+}
+
+/* ============================
+   DIVIDER
+   ============================ */
+.header-divider {
+  width: 1px;
+  height: 24px;
+  background: var(--border);
+}
+
+/* ============================
+   THEME BUTTON
+   ============================ */
+.theme-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--hover-bg);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+  position: relative;
+  overflow: hidden;
+}
+
+.theme-btn:hover {
+  background: var(--primary-light);
+  border-color: var(--primary);
+  color: var(--primary);
+  transform: rotate(15deg) scale(1.08);
+}
+
+.theme-btn:active {
+  transform: rotate(15deg) scale(0.95);
+}
+
+/* ============================
+   NOTIFICATION HINT (optional)
+   ============================ */
+.header-user-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), #B4A4FF);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  font-family: var(--font-main);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  border: 2px solid var(--border);
+}
+
+.header-user-avatar:hover {
+  transform: scale(1.1);
+  border-color: var(--primary);
+}
+
+/* ============================
+   RESPONSIVE
+   ============================ */
+@media (max-width: 1024px) {
+  .header {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 0 16px;
+    height: 58px;
+  }
+
+  .menu-btn {
+    display: flex;
+  }
+
+  .logo-subtext,
+  .header-divider {
+    display: none;
+  }
+
+  .logo-text {
+    font-size: 17px;
+  }
+
+  .logo-icon-wrap {
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+  }
+
+  .role-badge span.role-label {
+    display: none;
+  }
+
+  .role-badge {
+    padding: 6px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-right {
+    gap: 6px;
+  }
+}
