@@ -1,35 +1,3 @@
-// import SummaryCards from "../components/Dashboard/SummaryCards";
-// import BalanceTrendChart from "../components/Dashboard/BalanceTrendChart";
-// import SpendingBreakdownChart from "../components/Dashboard/SpendingBreakdownChart";
-// import "./Pages.css";
-
-// const DashboardPage = () => {
-//   return (
-//     <div className="page">
-//       <div className="page-header">
-//         <h2 className="page-title">Dashboard</h2>
-//         <p className="page-subtitle">Your financial overview at a glance</p>
-//       </div>
-
-//       <SummaryCards />
-
-//       <div className="charts-grid">
-//         <BalanceTrendChart />
-//         <SpendingBreakdownChart />
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default DashboardPage;
-
-
-
-
-
-
-
-
 import SummaryCards from "../components/Dashboard/SummaryCards";
 import BalanceTrendChart from "../components/Dashboard/BalanceTrendChart";
 import SpendingBreakdownChart from "../components/Dashboard/SpendingBreakdownChart";
