@@ -42,7 +42,6 @@
 
 
 
-
 .app {
   min-height: 100vh;
   display: flex;
@@ -53,23 +52,28 @@
 .app-body {
   display: flex;
   flex: 1;
-  overflow: hidden;
+  /* sidebar is sticky, so main-content fills the rest */
+  align-items: flex-start;
+  min-height: calc(100vh - 62px);
 }
 
 .main-content {
   flex: 1;
+  min-width: 0;               /* prevent flex child overflow */
   padding: 28px 32px;
-  min-height: calc(100vh - 62px);
   overflow-y: auto;
   overflow-x: hidden;
-  scroll-behavior: smooth;
   background: var(--bg);
   transition: background var(--transition-slow);
 }
 
-/* Subtle grid pattern for background texture */
+/* Subtle dot grid in dark mode */
 .dark .main-content {
-  background-image: radial-gradient(circle at 1px 1px, rgba(139, 126, 253, 0.04) 1px, transparent 0);
+  background-image: radial-gradient(
+    circle at 1px 1px,
+    rgba(139, 126, 253, 0.04) 1px,
+    transparent 0
+  );
   background-size: 32px 32px;
 }
 
@@ -90,22 +94,6 @@
   letter-spacing: -0.02em;
 }
 
-/* Page entry animation */
-@keyframes pageEnter {
-  from {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.page-content {
-  animation: pageEnter 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 @media (max-width: 1024px) {
   .main-content {
     padding: 24px;
@@ -113,8 +101,11 @@
 }
 
 @media (max-width: 768px) {
+  .app-body {
+    min-height: calc(100vh - 58px);
+  }
+
   .main-content {
     padding: 16px;
-    min-height: calc(100vh - 58px);
   }
 }
