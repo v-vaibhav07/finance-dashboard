@@ -1,0 +1,120 @@
+/* .app {
+  min-height: 100vh;
+}
+
+.app-body {
+  display: flex;
+}
+
+.main-content {
+  flex: 1;
+  padding: 24px;
+  min-height: calc(100vh - 57px);
+  overflow-y: auto;
+}
+
+.placeholder-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  gap: 12px;
+  color: var(--text-secondary);
+}
+
+.placeholder-page h2 {
+  font-size: 28px;
+  color: var(--text-primary);
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    padding: 16px;
+  }
+} */
+
+
+
+
+
+
+
+
+
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+}
+
+.app-body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.main-content {
+  flex: 1;
+  padding: 28px 32px;
+  min-height: calc(100vh - 62px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  background: var(--bg);
+  transition: background var(--transition-slow);
+}
+
+/* Subtle grid pattern for background texture */
+.dark .main-content {
+  background-image: radial-gradient(circle at 1px 1px, rgba(139, 126, 253, 0.04) 1px, transparent 0);
+  background-size: 32px 32px;
+}
+
+.placeholder-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  gap: 16px;
+  color: var(--text-secondary);
+}
+
+.placeholder-page h2 {
+  font-size: 26px;
+  color: var(--text-primary);
+  font-family: var(--font-main);
+  letter-spacing: -0.02em;
+}
+
+/* Page entry animation */
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page-content {
+  animation: pageEnter 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (max-width: 1024px) {
+  .main-content {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    padding: 16px;
+    min-height: calc(100vh - 58px);
+  }
+}
