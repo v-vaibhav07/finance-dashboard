@@ -779,9 +779,7 @@
 
 
 
-/* ============================
-   CONTAINER
-   ============================ */
+
 .transaction-list-container {
   background: var(--card-bg);
   border: 1px solid var(--border);
@@ -790,9 +788,6 @@
   overflow: hidden;
 }
 
-/* ============================
-   TOOLBAR
-   ============================ */
 .list-toolbar {
   display: flex;
   align-items: center;
@@ -904,9 +899,7 @@
   box-shadow: 0 0 4px var(--primary-glow, rgba(124, 110, 248, 0.5));
 }
 
-/* ============================
-   EXPORT BAR
-   ============================ */
+
 .export-bar {
   display: flex;
   gap: 10px;
@@ -944,9 +937,7 @@
   transform: translateY(-1px);
 }
 
-/* ============================
-   FILTER BAR
-   ============================ */
+
 .filter-bar {
   display: flex;
   align-items: flex-end;
@@ -1014,9 +1005,7 @@
   border-color: var(--red);
 }
 
-/* ============================
-   RESULTS INFO
-   ============================ */
+
 .results-info {
   padding: 9px 18px;
   border-bottom: 1px solid var(--border);
@@ -1035,9 +1024,6 @@
   font-weight: 700;
 }
 
-/* ============================
-   DESKTOP TABLE
-   ============================ */
 .table-wrapper {
   overflow-x: auto;
 }
@@ -1256,10 +1242,7 @@
 }
 
 .confirm-no:hover { background: var(--border); }
-
-/* ============================
-   EMPTY STATE
-   ============================ */
+ 
 .empty-state {
   display: flex;
   flex-direction: column;
@@ -1287,9 +1270,7 @@
   font-family: var(--font-body);
 }
 
-/* ============================
-   MOBILE CARDS
-   ============================ */
+
 .mobile-cards { display: none; }
 
 .mobile-card {
@@ -1366,9 +1347,6 @@
   border-top: 1px solid var(--border-light);
 }
 
-/* ============================
-   MODAL
-   ============================ */
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -1443,9 +1421,6 @@
   color: var(--red);
 }
 
-/* ============================
-   FORM
-   ============================ */
 .transaction-form {
   padding: 22px;
   display: flex;
@@ -1497,7 +1472,6 @@
   font-family: var(--font-body);
 }
 
-/* Type Toggle */
 .type-toggle {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1540,7 +1514,6 @@
   border: 1px solid rgba(255, 84, 112, 0.3);
 }
 
-/* Form Actions */
 .form-actions {
   display: flex;
   gap: 10px;
@@ -1590,10 +1563,7 @@
 .btn-submit:active {
   transform: translateY(0);
 }
-
-/* ============================
-   RESPONSIVE
-   ============================ */
+ 
 @media (max-width: 768px) {
   .list-toolbar {
     flex-direction: column;
