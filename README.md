@@ -77,60 +77,63 @@ A modern, responsive **Finance Dashboard** built using React + Vite that helps u
 ---
 
 ## 📁 Project Structure
+## 📁 Project Structure
+
+```bash
 FINANCE-DASHBOARD/
 ├── public/
-│ └── assets/
+│   └── assets/
 ├── src/
-│ ├── assets/
-│ ├── components/
-│ │ ├── Dashboard/
-│ │ │ ├── BalanceTrendChart.jsx
-│ │ │ ├── BudgetGoals.css
-│ │ │ ├── BudgetGoals.jsx
-│ │ │ ├── Charts.css
-│ │ │ ├── FinancialHealthScore.css
-│ │ │ ├── FinancialHealthScore.jsx
-│ │ │ ├── SavingsGoal.css
-│ │ │ ├── SavingsGoal.jsx
-│ │ │ ├── SpendingBreakdownChart.jsx
-│ │ │ ├── SummaryCards.css
-│ │ │ └── SummaryCards.jsx
-│ │ ├── Insights/
-│ │ │ ├── Insights.css
-│ │ │ └── InsightsPanel.jsx
-│ │ ├── Layout/
-│ │ │ ├── Header.css
-│ │ │ ├── Header.jsx
-│ │ │ ├── Sidebar.css
-│ │ │ └── Sidebar.jsx
-│ │ ├── RoleSwitcher/
-│ │ │ ├── RoleSwitcher.css
-│ │ │ └── RoleSwitcher.jsx
-│ │ └── Transactions/
-│ │ ├── ReceiptModal.css
-│ │ ├── ReceiptModal.jsx
-│ │ ├── TransactionForm.jsx
-│ │ ├── TransactionList.jsx
-│ │ └── Transactions.css
-│ ├── context/
-│ │ ├── AppContext.jsx
-│ │ ├── Toast.css
-│ │ └── ToastContext.jsx
-│ ├── data/
-│ │ └── mockData.js
-│ ├── pages/
-│ │ ├── DashboardPage.jsx
-│ │ ├── DocsPage.css
-│ │ ├── DocsPage.jsx
-│ │ ├── InsightsPage.jsx
-│ │ ├── Pages.css
-│ │ └── TransactionsPage.jsx
-│ ├── utils/
-│ │ └── helpers.js
-│ ├── App.css
-│ ├── App.jsx
-│ ├── index.css
-│ └── main.jsx
+│   ├── assets/
+│   ├── components/
+│   │   ├── Dashboard/
+│   │   │   ├── BalanceTrendChart.jsx
+│   │   │   ├── BudgetGoals.css
+│   │   │   ├── BudgetGoals.jsx
+│   │   │   ├── Charts.css
+│   │   │   ├── FinancialHealthScore.css
+│   │   │   ├── FinancialHealthScore.jsx
+│   │   │   ├── SavingsGoal.css
+│   │   │   ├── SavingsGoal.jsx
+│   │   │   ├── SpendingBreakdownChart.jsx
+│   │   │   ├── SummaryCards.css
+│   │   │   └── SummaryCards.jsx
+│   │   ├── Insights/
+│   │   │   ├── Insights.css
+│   │   │   └── InsightsPanel.jsx
+│   │   ├── Layout/
+│   │   │   ├── Header.css
+│   │   │   ├── Header.jsx
+│   │   │   ├── Sidebar.css
+│   │   │   └── Sidebar.jsx
+│   │   ├── RoleSwitcher/
+│   │   │   ├── RoleSwitcher.css
+│   │   │   └── RoleSwitcher.jsx
+│   │   └── Transactions/
+│   │       ├── ReceiptModal.css
+│   │       ├── ReceiptModal.jsx
+│   │       ├── TransactionForm.jsx
+│   │       ├── TransactionList.jsx
+│   │       └── Transactions.css
+│   ├── context/
+│   │   ├── AppContext.jsx
+│   │   ├── Toast.css
+│   │   └── ToastContext.jsx
+│   ├── data/
+│   │   └── mockData.js
+│   ├── pages/
+│   │   ├── DashboardPage.jsx
+│   │   ├── DocsPage.css
+│   │   ├── DocsPage.jsx
+│   │   ├── InsightsPage.jsx
+│   │   ├── Pages.css
+│   │   └── TransactionsPage.jsx
+│   ├── utils/
+│   │   └── helpers.js
+│   ├── App.css
+│   ├── App.jsx
+│   ├── index.css
+│   └── main.jsx
 ├── .gitignore
 ├── eslint.config.js
 ├── index.html
@@ -138,6 +141,7 @@ FINANCE-DASHBOARD/
 ├── package.json
 ├── README.md
 └── vite.config.js
+```
 
 
 
