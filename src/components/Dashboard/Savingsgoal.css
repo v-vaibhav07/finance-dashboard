@@ -1,0 +1,479 @@
+.savings-goal {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px 24px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* ── Header ─────────────────────────────────────────── */
+.sg-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.sg-header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sg-title-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background: var(--orange-light);
+  color: var(--orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.sg-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+  font-family: var(--font-main);
+  letter-spacing: -0.02em;
+}
+
+.sg-subtitle {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin: 2px 0 0;
+  font-family: var(--font-body);
+}
+
+.sg-monthly-hint {
+  color: var(--green);
+  font-weight: 600;
+}
+
+.sg-add-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: var(--font-body);
+  cursor: pointer;
+  transition: all 0.18s ease;
+  white-space: nowrap;
+}
+
+.sg-add-btn:hover {
+  background: var(--primary-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px var(--primary-glow, rgba(124, 110, 248, 0.35));
+}
+
+/* ── Form ────────────────────────────────────────────── */
+.sg-form {
+  background: var(--hover-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  animation: slideDown 0.2s ease;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.sg-form-emojis {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.sg-emoji-btn {
+  width: 34px;
+  height: 34px;
+  border: 1.5px solid var(--border);
+  background: var(--card-bg);
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s;
+}
+
+.sg-emoji-btn:hover  { border-color: var(--primary); transform: scale(1.1); }
+.sg-emoji-btn.active { border-color: var(--primary); background: var(--primary-light); transform: scale(1.1); }
+
+.sg-form-row       { display: flex; flex-direction: column; gap: 12px; }
+.sg-form-row.two   { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+.sg-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.sg-form-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  font-family: var(--font-main);
+}
+
+.sg-form-input {
+  padding: 9px 12px;
+  border: 1px solid var(--border);
+  background: var(--card-bg);
+  color: var(--text-primary);
+  border-radius: 9px;
+  font-size: 13.5px;
+  font-family: var(--font-body);
+  outline: none;
+  transition: all 0.18s;
+}
+
+.sg-form-input:focus { border-color: var(--primary); box-shadow: 0 0 0 3px var(--primary-light); }
+.sg-form-input.err   { border-color: var(--red); box-shadow: 0 0 0 3px var(--red-light); }
+
+.sg-form-error {
+  font-size: 12px;
+  color: var(--red);
+  font-family: var(--font-body);
+}
+
+.sg-form-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.sg-btn-cancel {
+  flex: 1;
+  padding: 9px;
+  background: var(--hover-bg);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: var(--font-body);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.sg-btn-cancel:hover { background: var(--border); }
+
+.sg-btn-save {
+  flex: 2;
+  padding: 9px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: var(--font-body);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: all 0.18s;
+}
+
+.sg-btn-save:hover {
+  background: var(--primary-dark);
+  box-shadow: 0 4px 12px var(--primary-glow, rgba(124,110,248,0.3));
+}
+
+/* ── Empty state ─────────────────────────────────────── */
+.sg-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 32px 16px;
+  text-align: center;
+}
+
+.sg-empty-icon    { font-size: 40px; }
+.sg-empty-title   { font-size: 15px; font-weight: 700; color: var(--text-primary); margin: 0; font-family: var(--font-main); }
+.sg-empty-sub     { font-size: 13px; color: var(--text-muted); margin: 0; font-family: var(--font-body); }
+
+/* ── Goal cards ──────────────────────────────────────── */
+.sg-goals-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sg-goal-card {
+  padding: 14px 16px;
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  background: var(--card-bg);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: all 0.22s ease;
+}
+
+.sg-goal-card:hover {
+  border-color: var(--border);
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-1px);
+}
+
+.sg-goal-card.done {
+  background: rgba(46, 232, 138, 0.05);
+  border-color: rgba(46, 232, 138, 0.25);
+}
+
+.sg-goal-card.editing {
+  background: var(--hover-bg);
+  padding: 0;
+  border: none;
+  box-shadow: none;
+  transform: none;
+}
+
+.sg-goal-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.sg-goal-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  min-width: 0;
+}
+
+.sg-goal-emoji {
+  font-size: 26px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.sg-goal-name-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.sg-goal-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+  font-family: var(--font-main);
+  letter-spacing: -0.01em;
+}
+
+.sg-done-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  background: var(--green-light);
+  color: var(--green);
+  border-radius: 50px;
+  font-size: 11px;
+  font-weight: 700;
+  font-family: var(--font-main);
+}
+
+.sg-goal-meta {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  margin-top: 3px;
+}
+
+.sg-goal-saved  { font-size: 14px; font-weight: 700; color: var(--primary); font-family: var(--font-main); }
+.sg-goal-sep    { font-size: 13px; color: var(--text-muted); }
+.sg-goal-target { font-size: 13px; font-weight: 600; color: var(--text-secondary); font-family: var(--font-main); }
+
+.sg-goal-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.sg-pct {
+  font-size: 16px;
+  font-weight: 800;
+  font-family: var(--font-main);
+  color: var(--text-secondary);
+}
+
+.sg-pct.near { color: var(--orange); }
+.sg-pct.done { color: var(--green); }
+
+.sg-goal-actions {
+  display: flex;
+  gap: 4px;
+  opacity: 0;
+  transition: opacity 0.18s;
+}
+
+.sg-goal-card:hover .sg-goal-actions { opacity: 1; }
+
+.sg-action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.sg-action-btn.edit   { background: var(--primary-light); color: var(--primary); }
+.sg-action-btn.delete { background: var(--red-light);     color: var(--red); }
+.sg-action-btn.edit:hover   { background: var(--primary); color: #fff; }
+.sg-action-btn.delete:hover { background: var(--red);     color: #fff; }
+
+/* ── Progress bar ────────────────────────────────────── */
+.sg-progress-track {
+  width: 100%;
+  height: 7px;
+  background: var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.sg-progress-bar {
+  height: 100%;
+  border-radius: 10px;
+  transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sg-progress-bar.active { background: linear-gradient(90deg, var(--primary), #B4A4FF); }
+.sg-progress-bar.near   { background: linear-gradient(90deg, var(--orange), #FFD166); }
+.sg-progress-bar.done   { background: linear-gradient(90deg, var(--green), #7BEDD0); }
+
+/* ── Footer ──────────────────────────────────────────── */
+.sg-goal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.sg-goal-hints {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.sg-hint {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11.5px;
+  color: var(--text-muted);
+  font-family: var(--font-body);
+}
+
+.sg-hint.red    { color: var(--red); }
+.sg-hint.orange { color: var(--orange); }
+
+/* Add funds inline */
+.sg-add-funds-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 12px;
+  background: var(--green-light);
+  color: var(--green);
+  border: 1px solid rgba(46, 232, 138, 0.25);
+  border-radius: 7px;
+  font-size: 12px;
+  font-weight: 700;
+  font-family: var(--font-body);
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+
+.sg-add-funds-btn:hover { background: var(--green); color: #fff; }
+
+.sg-add-funds-inline {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--input-bg);
+  border: 1px solid var(--primary);
+  border-radius: 8px;
+  padding: 4px 8px;
+  box-shadow: 0 0 0 3px var(--primary-light);
+  animation: slideDown 0.15s ease;
+}
+
+.sg-currency {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-family: var(--font-main);
+}
+
+.sg-funds-input {
+  border: none;
+  background: none;
+  outline: none;
+  width: 80px;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: var(--font-main);
+  color: var(--text-primary);
+}
+
+.sg-funds-save, .sg-funds-cancel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.sg-funds-save   { background: var(--green-light); color: var(--green); }
+.sg-funds-cancel { background: var(--red-light);   color: var(--red); }
+.sg-funds-save:hover   { background: var(--green); color: #fff; }
+.sg-funds-cancel:hover { background: var(--red);   color: #fff; }
+
+@media (max-width: 600px) {
+  .sg-form-row.two   { grid-template-columns: 1fr; }
+  .sg-goal-footer    { flex-direction: column; align-items: flex-start; }
+}
