@@ -9,9 +9,7 @@
   to   { opacity: 1; transform: translateY(0); }
 }
 
-.page-header {
-  margin-bottom: 28px;
-}
+.page-header        { margin-bottom: 28px; }
 
 .page-header-top {
   display: flex;
@@ -65,13 +63,13 @@
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   white-space: nowrap;
   flex-shrink: 0;
-  letter-spacing: 0.01em;
   position: relative;
   overflow: hidden;
 }
 
 .add-btn::before {
   content: '';
+  /* position: relative; */
   position: absolute;
   inset: 0;
   background: rgba(255, 255, 255, 0.12);
@@ -80,17 +78,12 @@
 }
 
 .add-btn:hover::before { opacity: 1; }
-
 .add-btn:hover {
   background: var(--primary-dark);
   transform: translateY(-2px);
   box-shadow: 0 6px 18px var(--primary-glow, rgba(124, 110, 248, 0.4));
 }
-
-.add-btn:active {
-  transform: translateY(0);
-  box-shadow: none;
-}
+.add-btn:active { transform: translateY(0); box-shadow: none; }
 
 .dashboard-extras-grid {
   display: grid;
@@ -99,24 +92,27 @@
   margin-top: 20px;
 }
 
+.dashboard-full-row {
+  margin-top: 20px;
+}
+
 @media (max-width: 1024px) {
   .page-title { font-size: 23px; }
 }
 
 @media (max-width: 900px) {
-  .dashboard-extras-grid {
-    grid-template-columns: 1fr;
-  }
+  .dashboard-extras-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 768px) {
-  .page-header { margin-bottom: 20px; }
-  .page-title  { font-size: 20px; }
+  .page-header   { margin-bottom: 20px; }
+  .page-title    { font-size: 20px; }
   .page-subtitle { font-size: 13px; }
 
-  .add-btn span { display: none; }
+  .add-btn span   { display: none; }
   .add-btn {
     padding: 10px;
+    /* border : solid 2 black%; */
     border-radius: 50%;
     width: 40px;
     height: 40px;
