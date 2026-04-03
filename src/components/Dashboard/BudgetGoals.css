@@ -9,7 +9,6 @@
   gap: 18px;
 }
 
-/* ── Header ─────────────────────────────────────────── */
 .budget-header {
   display: flex;
   align-items: flex-start;
@@ -96,7 +95,6 @@
   background: var(--border);
 }
 
-/* ── Overall progress ────────────────────────────────── */
 .budget-overall {
   display: flex;
   flex-direction: column;
@@ -130,7 +128,7 @@
 .bom-pct.orange { color: var(--orange); }
 .bom-pct.red    { color: var(--red); }
 
-/* ── Shared bar ────────────────────────────────────── */
+
 .budget-bar-track {
   width: 100%;
   height: 6px;
@@ -150,7 +148,6 @@
 .budget-bar-fill.over    { background: linear-gradient(90deg, var(--red), #FF9F5A); }
 .budget-bar-fill.overall { height: 8px; }
 
-/* ── Category rows ───────────────────────────────────── */
 .budget-rows {
   display: flex;
   flex-direction: column;
@@ -272,7 +269,6 @@
   color: var(--primary);
 }
 
-/* Inline edit */
 .budget-edit-inline {
   display: flex;
   align-items: center;
@@ -333,7 +329,6 @@
 
 .budget-edit-cancel:hover { background: var(--red); color: #fff; }
 
-/* Status badge */
 .budget-status-badge {
   display: inline-flex;
   align-items: center;
@@ -349,7 +344,6 @@
 .budget-status-badge.warn { background: var(--orange-light); color: var(--orange); }
 .budget-status-badge.over { background: var(--red-light);    color: var(--red); }
 
-/* Hint */
 .budget-edit-hint {
   display: flex;
   align-items: center;
