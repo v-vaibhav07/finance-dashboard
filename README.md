@@ -77,7 +77,6 @@ A modern, responsive **Finance Dashboard** built using React + Vite that helps u
 ---
 
 ## 📁 Project Structure
-## 📁 Project Structure
 
 ```bash
 FINANCE-DASHBOARD/
