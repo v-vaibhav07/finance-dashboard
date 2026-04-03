@@ -8,14 +8,12 @@
 .app-body {
   display: flex;
   flex: 1;
-  /* sidebar is sticky, so main-content fills the rest */
   align-items: flex-start;
   min-height: calc(100vh - 62px);
 }
-
 .main-content {
   flex: 1;
-  min-width: 0;               /* prevent flex child overflow */
+  min-width: 0;              
   padding: 28px 32px;
   overflow-y: auto;
   overflow-x: hidden;
@@ -23,10 +21,9 @@
   transition: background var(--transition-slow);
 }
 
-/* Subtle dot grid in dark mode */
 .dark .main-content {
   background-image: radial-gradient(
-    circle at 1px 1px,
+   circle at 1px 1px,
     rgba(139, 126, 253, 0.04) 1px,
     transparent 0
   );
@@ -39,7 +36,7 @@
   align-items: center;
   justify-content: center;
   min-height: 400px;
-  gap: 16px;
+gap: 16px;
   color: var(--text-secondary);
 }
 
@@ -60,7 +57,6 @@
   .app-body {
     min-height: calc(100vh - 58px);
   }
-
   .main-content {
     padding: 16px;
   }
