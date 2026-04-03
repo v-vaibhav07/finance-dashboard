@@ -5,9 +5,7 @@
   margin-bottom: 28px;
 }
 
-/* ============================
-   BASE CARD
-   ============================ */
+
 .summary-card {
   background: var(--card-bg);
   border: 1px solid var(--border);
@@ -20,7 +18,6 @@
   cursor: default;
 }
 
-/* Glow orb background */
 .summary-card::after {
   content: '';
   position: absolute;
@@ -39,7 +36,6 @@
 .summary-card.green::after   { background: radial-gradient(circle, rgba(46, 232, 138, 0.25), transparent 70%); }
 .summary-card.red::after     { background: radial-gradient(circle, rgba(255, 84, 112, 0.2), transparent 70%); }
 
-/* Top accent bar */
 .summary-card::before {
   content: '';
   position: absolute;
@@ -55,7 +51,7 @@
 .summary-card.green::before   { background: linear-gradient(90deg, var(--green), #7BEDD0); }
 .summary-card.red::before     { background: linear-gradient(90deg, var(--red), #FF9F5A); }
 
-/* Hover state */
+
 .summary-card:hover {
   transform: translateY(-5px);
   box-shadow: var(--shadow-lg);
@@ -71,9 +67,6 @@
   transform: scale(1.2);
 }
 
-/* ============================
-   CARD HEADER
-   ============================ */
 .card-header {
   display: flex;
   align-items: flex-start;
@@ -113,7 +106,6 @@
   box-shadow: 0 4px 12px rgba(255, 84, 112, 0.15);
 }
 
-/* Trend badge */
 .card-trend {
   display: flex;
   align-items: center;
@@ -143,9 +135,6 @@
   transform: scale(1.05);
 }
 
-/* ============================
-   CARD BODY
-   ============================ */
 .card-body {
   display: flex;
   flex-direction: column;
@@ -218,9 +207,7 @@
   color: var(--red);
 }
 
-/* ============================
-   RESPONSIVE
-   ============================ */
+
 @media (max-width: 1100px) {
   .summary-cards {
     grid-template-columns: repeat(2, 1fr);
