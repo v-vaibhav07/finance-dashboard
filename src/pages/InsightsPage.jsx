@@ -19,7 +19,7 @@ const InsightsPage = () => {
       <InsightsPanel />
 
       {/* <InsightsPanel data={mockData} /> */}
-      {/* <InsightsPanel /> extra */}
+     
 
     </div>
   );
