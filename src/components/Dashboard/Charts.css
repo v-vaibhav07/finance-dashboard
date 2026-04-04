@@ -72,7 +72,6 @@
   font-family: var(--font-body);
 }
 
-/* Chart period badge */
 .chart-badge {
   display: inline-flex;
   align-items: center;

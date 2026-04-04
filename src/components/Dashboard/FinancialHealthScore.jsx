@@ -7,7 +7,7 @@ import {
 } from "lucide-react";
 import "./FinancialHealthScore.css";
 
-// ── Score computation ────────────────────────────────────────────────────────
+
 const computeScore = (transactions, budgets) => {
   if (!transactions.length) return { total: 0, breakdown: [], grade: "N/A", color: "muted" };
 
@@ -40,7 +40,7 @@ const computeScore = (transactions, budgets) => {
   breakdown.push({ label: "Budget Adherence", score: budgetScore, max: 25, color: budgetScore >= 20 ? "green" : budgetScore >= 12 ? "orange" : "red", icon: ShieldCheck });
   if (overBudget > 0) tips.push(`You exceeded budget in ${overBudget} categor${overBudget > 1 ? "ies" : "y"}. Try adjusting limits.`);
 
-  // 3. Income diversity (max 20pts)
+ 
   const incomeCategories = new Set(transactions.filter((t) => t.type === "income").map((t) => t.category));
   let diversityScore = 0;
   if (incomeCategories.size >= 3)      diversityScore = 20;
@@ -49,7 +49,6 @@ const computeScore = (transactions, budgets) => {
   breakdown.push({ label: "Income Diversity", score: diversityScore, max: 20, color: diversityScore >= 13 ? "green" : "orange", icon: TrendingUp });
   if (incomeCategories.size < 2) tips.push("Consider adding a secondary income source.");
 
-  // 4. Spending consistency (max 25pts)
   let consistencyScore = 25;
   if (monthlyData.length >= 2) {
     const expenseArr = monthlyData.map((m) => m.expenses);
@@ -74,7 +73,6 @@ const computeScore = (transactions, budgets) => {
   return { total, breakdown, grade, color, label, tips };
 };
 
-// ── Component ─────────────────────────────────────────────────────────────────
 const FinancialHealthScore = () => {
   const { transactions, budgets } = useApp();
   const { total, breakdown, grade, color, label, tips } = useMemo(
@@ -119,7 +117,6 @@ const FinancialHealthScore = () => {
           </div>
         </div>
 
-        {/* Sub-scores */}
         <div className="fhs-breakdown">
           {breakdown.map(({ label, score, max, color: c, icon: Icon }) => (
             <div className="fhs-sub" key={label}>
@@ -139,7 +136,6 @@ const FinancialHealthScore = () => {
         </div>
       </div>
 
-      {/* Tips */}
       {tips.length > 0 && (
         <div className="fhs-tips">
           <div className="fhs-tips-header">

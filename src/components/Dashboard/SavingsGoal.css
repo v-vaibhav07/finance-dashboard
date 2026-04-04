@@ -9,7 +9,6 @@
   gap: 18px;
 }
 
-/* ── Header ─────────────────────────────────────────── */
 .sg-header {
   display: flex;
   align-items: flex-start;
@@ -80,7 +79,7 @@
   box-shadow: 0 4px 14px var(--primary-glow, rgba(124, 110, 248, 0.35));
 }
 
-/* ── Form ────────────────────────────────────────────── */
+
 .sg-form {
   background: var(--hover-bg);
   border: 1px solid var(--border);
@@ -204,7 +203,6 @@
   box-shadow: 0 4px 12px var(--primary-glow, rgba(124,110,248,0.3));
 }
 
-/* ── Empty state ─────────────────────────────────────── */
 .sg-empty {
   display: flex;
   flex-direction: column;
@@ -219,7 +217,6 @@
 .sg-empty-title   { font-size: 15px; font-weight: 700; color: var(--text-primary); margin: 0; font-family: var(--font-main); }
 .sg-empty-sub     { font-size: 13px; color: var(--text-muted); margin: 0; font-family: var(--font-body); }
 
-/* ── Goal cards ──────────────────────────────────────── */
 .sg-goals-list {
   display: flex;
   flex-direction: column;
@@ -360,7 +357,6 @@
 .sg-action-btn.edit:hover   { background: var(--primary); color: #fff; }
 .sg-action-btn.delete:hover { background: var(--red);     color: #fff; }
 
-/* ── Progress bar ────────────────────────────────────── */
 .sg-progress-track {
   width: 100%;
   height: 7px;
@@ -379,7 +375,6 @@
 .sg-progress-bar.near   { background: linear-gradient(90deg, var(--orange), #FFD166); }
 .sg-progress-bar.done   { background: linear-gradient(90deg, var(--green), #7BEDD0); }
 
-/* ── Footer ──────────────────────────────────────────── */
 .sg-goal-footer {
   display: flex;
   align-items: center;

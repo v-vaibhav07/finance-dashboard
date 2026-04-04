@@ -14,7 +14,6 @@
   box-shadow: var(--shadow-md);
 }
 
-/* ── Header ─────────────────────────────────────────── */
 .fhs-header {
   display: flex;
   align-items: center;
@@ -55,7 +54,6 @@
   font-family: var(--font-body);
 }
 
-/* ── Body: ring + breakdown ──────────────────────────── */
 .fhs-body {
   display: flex;
   align-items: center;
@@ -63,7 +61,6 @@
   flex-wrap: wrap;
 }
 
-/* SVG ring */
 .fhs-ring-wrap {
   position: relative;
   width: 130px;
@@ -146,7 +143,6 @@
 .fhs-label.orange { color: var(--orange); }
 .fhs-label.red    { color: var(--red); }
 
-/* ── Sub-scores ──────────────────────────────────────── */
 .fhs-breakdown {
   flex: 1;
   display: flex;
@@ -219,7 +215,6 @@
 .fhs-sub-bar.orange { background: var(--orange); }
 .fhs-sub-bar.red    { background: var(--red); }
 
-/* ── Tips ────────────────────────────────────────────── */
 .fhs-tips {
   background: var(--orange-light);
   border: 1px solid rgba(255, 159, 90, 0.25);
@@ -265,7 +260,6 @@
   color: var(--orange);
 }
 
-/* ── Congrats banner ─────────────────────────────────── */
 .fhs-congrats {
   display: flex;
   align-items: center;

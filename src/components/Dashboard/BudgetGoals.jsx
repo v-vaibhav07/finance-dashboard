@@ -19,7 +19,6 @@ const BudgetGoals = () => {
   const breakdown = getCategoryBreakdown(transactions);
   const budgetedCats = Object.keys(budgets);
 
-  // Merge actual spending with budgets
   const rows = budgetedCats.map((cat) => {
     const found = breakdown.find((b) => b.name === cat);
     const spent = found ? found.value : 0;
@@ -48,7 +47,6 @@ const BudgetGoals = () => {
 
   return (
     <div className="budget-goals">
-      {/* Header */}
       <div className="budget-header">
         <div className="budget-header-left">
           <div className="budget-title-icon"><Target size={15} /></div>
@@ -88,7 +86,6 @@ const BudgetGoals = () => {
         </div>
       </div>
 
-      {/* Category rows */}
       <div className="budget-rows">
         {rows.map(({ cat, spent, budget, pct, status }) => {
           const StatusIcon = status.icon;
@@ -150,7 +147,6 @@ const BudgetGoals = () => {
                 </div>
               </div>
 
-              {/* Progress bar */}
               <div className="budget-bar-track">
                 <div
                   className={`budget-bar-fill ${status.cls}`}
